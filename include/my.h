@@ -13,8 +13,15 @@
     #include <SFML/Audio.h>
     #include <SFML/Network.h>
     #include <SFML/Graphics/RenderWindow.h>
-    #include <stdio.h>
     #include <stdarg.h>
+    #include <stdlib.h>
+    #include <string.h>
+    #include <stdio.h>
+    #include <unistd.h>
+    #include "entity.h"
+    #include "plane.h"
+    #include "tower.h"
+    #include "zone.h"
 int main(int argc, char **argv);
 int my_isneg(int nb);
 int my_put_nbr(int nb);
@@ -39,4 +46,17 @@ void flag_x2(va_list list);
 void flag_x(va_list list);
 int flag_detector(const char *format, int i, va_list list);
 int my_printf(const char *format, ...);
+void initialize_tower(tower_t *tower, char *line);
+void initialize_plane(plane_t *plane, char *line);
+entity_t *create_entity(char *line);
+int executate_script(FILE *file, entity_t **entities,
+    char **line, size_t *len);
+int parse_script(const char *filepath, entity_t **entities);
+sfSprite *create_sprite(char *filepath, int x, int y);
+void destroy_window(sfRenderWindow *window);
+sfRenderWindow *create_window(int width, int height, char *title);
+void manage_events(sfRenderWindow *window, int *is_running);
+void draw_entities(sfRenderWindow *window, entity_t *entities);
+void draw_tower(sfRenderWindow *window, tower_t *tower);
+void draw_aircraft(sfRenderWindow *window, plane_t *plane);
 #endif
