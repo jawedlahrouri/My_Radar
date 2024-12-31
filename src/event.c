@@ -10,6 +10,7 @@
 void manage_events(sfRenderWindow *window, int *is_running)
 {
     sfEvent event;
+
     while (sfRenderWindow_pollEvent(window, &event)) {
         if (event.type == sfEvtClosed) {
             *is_running = 0;

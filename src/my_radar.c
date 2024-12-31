@@ -7,7 +7,8 @@
 
 #include "../include/my.h"
 
-void game_loop(sfRenderWindow *window, sfSprite *background, entity_t *entities)
+void game_loop(sfRenderWindow *window, sfSprite *background,
+    entity_t *entities)
 {
     sfEvent event;
     int is_running = 1;
@@ -16,7 +17,7 @@ void game_loop(sfRenderWindow *window, sfSprite *background, entity_t *entities)
         manage_events(window, &is_running);
         sfRenderWindow_clear(window, sfWhite);
         sfRenderWindow_drawSprite(window, background, NULL);
-        draw_entities(window, entities); 
+        draw_entities(window, entities);
         sfRenderWindow_display(window);
     }
 }

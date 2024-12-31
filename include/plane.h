@@ -16,7 +16,7 @@ typedef struct plane_t {
     int speed;
     int delay;
     int is_flying;
-    float current_x; 
+    float current_x;
     float current_y;
 
 } plane_t;
