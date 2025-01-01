@@ -22,6 +22,7 @@
     #include "plane.h"
     #include "tower.h"
     #include "zone.h"
+    #include "ath.h"
 int main(int argc, char **argv);
 int my_isneg(int nb);
 int my_put_nbr(int nb);
@@ -59,4 +60,7 @@ void manage_events(sfRenderWindow *window, int *is_running);
 void draw_entities(sfRenderWindow *window, entity_t *entities);
 void draw_tower(sfRenderWindow *window, tower_t *tower);
 void draw_aircraft(sfRenderWindow *window, plane_t *plane);
+void display_timer(sfRenderWindow *window, sfFont *font, float time);
+void display_fps(sfRenderWindow *window, sfFont *font, float fps);
+ath_t *initialize_ath(const char *font_path);
 #endif

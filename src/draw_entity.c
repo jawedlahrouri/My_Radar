@@ -18,7 +18,7 @@ void draw_aircraft(sfRenderWindow *window, plane_t *plane)
         return;
     sfRectangleShape_setPosition(plane_shape, position);
     sfRectangleShape_setSize(plane_shape, size);
-    sfRectangleShape_setFillColor(plane_shape, sfBlue);
+    sfRectangleShape_setFillColor(plane_shape, sfWhite);
     sfRenderWindow_drawRectangleShape(window, plane_shape, NULL);
     sfRectangleShape_destroy(plane_shape);
 }
