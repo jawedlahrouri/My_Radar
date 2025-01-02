@@ -8,7 +8,7 @@
 #include "../include/my.h"
 
 
-void draw_aircraft(sfRenderWindow *window, plane_t *plane)
+void draw_plane(sfRenderWindow *window, plane_t *plane)
 {
     sfRectangleShape *plane_shape = sfRectangleShape_create();
     sfVector2f position = {plane->x_start, plane->y_start};
@@ -44,7 +44,7 @@ void draw_entities(sfRenderWindow *window, entity_t *entities)
     for (entity_t *current = entities; current != NULL;
         current = current->next) {
         if (current->type == 'A')
-            draw_aircraft(window, &current->aircraft);
+            draw_plane(window, &current->plane);
         if (current->type == 'T')
             draw_tower(window, &current->tower);
     }

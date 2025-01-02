@@ -59,7 +59,7 @@ sfRenderWindow *create_window(int width, int height, char *title);
 void manage_events(sfRenderWindow *window, int *is_running);
 void draw_entities(sfRenderWindow *window, entity_t *entities);
 void draw_tower(sfRenderWindow *window, tower_t *tower);
-void draw_aircraft(sfRenderWindow *window, plane_t *plane);
+void draw_plane(sfRenderWindow *window, plane_t *plane);
 void display_timer(sfRenderWindow *window, sfFont *font, float time);
 void display_fps(sfRenderWindow *window, sfFont *font, float fps);
 ath_t *initialize_ath(const char *font_path);

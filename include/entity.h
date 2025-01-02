@@ -14,7 +14,7 @@
 typedef struct entity_t {
     char type;
     union {
-        plane_t aircraft;
+        plane_t plane;
         tower_t tower;
     };
     struct entity_t *next;

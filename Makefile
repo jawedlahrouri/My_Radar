@@ -14,6 +14,7 @@ SRC	=	src/my_radar.c \
 		src/sprite.c \
 		src/window.c \
 		src/draw_entity.c \
+		src/ath.c \
 		$(pathdir)/my_compute_power_rec.c \
 		$(pathdir)/my_compute_square_root.c \
 		$(pathdir)/my_isneg.c \

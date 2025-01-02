@@ -24,7 +24,6 @@ void game_loop(sfRenderWindow *window, sfSprite *background,
         sfRenderWindow_drawSprite(window, background, NULL);
         draw_entities(window, entities);
         display_timer(window, ath->font, ath->time);
-        display_fps(window, ath->font, fps);
         sfRenderWindow_display(window);
     }
 }

@@ -42,7 +42,7 @@ entity_t *create_entity(char *line)
     sscanf(line, "%c", &type);
     if (type == 'A') {
         entity->type = 'A';
-        initialize_plane(&entity->aircraft, line);
+        initialize_plane(&entity->plane, line);
     } else if (type == 'T') {
         entity->type = 'T';
         initialize_tower(&entity->tower, line);
