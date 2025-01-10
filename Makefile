@@ -35,7 +35,8 @@ SRC	=	src/my_radar.c \
 		$(pathdir)/flag_s.c \
 		$(pathdir)/flag_x.c \
 		$(pathdir)/flag_x2.c \
-		$(pathdir)/my_printf.c
+		$(pathdir)/my_printf.c \
+		$(pathdir)/my_strcmp.c
 
 OBJ  	=	 $(SRC:.c=.o)
 
