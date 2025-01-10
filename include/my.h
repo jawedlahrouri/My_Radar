@@ -23,7 +23,7 @@
     #include "tower.h"
     #include "zone.h"
     #include "ath.h"
-int main(int argc, char **argv);
+int main(int argc, char **argv, char **env);
 int my_isneg(int nb);
 int my_put_nbr(int nb);
 void my_swap(int *a, int *b);
@@ -63,4 +63,5 @@ void draw_plane(sfRenderWindow *window, plane_t *plane);
 void display_timer(sfRenderWindow *window, sfFont *font, float time);
 void display_fps(sfRenderWindow *window, sfFont *font, float fps);
 ath_t *initialize_ath(const char *font_path);
+int my_strcmp(char *const str1, char *const str2);
 #endif
