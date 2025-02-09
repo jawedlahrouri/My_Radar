@@ -36,13 +36,13 @@ void game_loop(sfRenderWindow *window, sfSprite *background,
 
 int main(int argc, char **argv, char **env)
 {
-    if (is_tty(env) == 1)
-        return 84;
     sfRenderWindow *window = create_window(1920, 1080, "RADAR");
     sfSprite *background = create_sprite("assets/background.png", 1920, 1080);
     entity_t *entities = NULL;
     ath_t *ath = initialize_ath("assets/arial.ttf");
 
+    if (is_tty(env) == 1)
+        return 84;
     if (argv[1][0] == '-' && argv[1][1] == 'h' && argv[1][2] == '\0') {
         my_putstr("CREDIT : Jawed Lahrouri\n appuyez sur esc pour fermer\n");
         return 0;
